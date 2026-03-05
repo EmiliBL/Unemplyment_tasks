@@ -151,7 +151,7 @@ export default function App() {
 
   const markSeen = () => { localStorage.setItem("jsh_seen", "1"); setScreen("pick"); };
 
-  const pickPath = (pathId) => {
+ const pickPath = (pathId) => {
     if (pathId === "rest") {
       const restCount = parseInt(localStorage.getItem("jsh_restcount") || "0") + 1;
       localStorage.setItem("jsh_restcount", restCount);
@@ -163,6 +163,10 @@ export default function App() {
       const newCount = hardDays + 1;
       setHardDays(newCount);
       localStorage.setItem("jsh_harddays", newCount);
+    }
+    if (pathId === "recharge") {
+      setHardDays(0);
+      localStorage.setItem("jsh_harddays", "0");
     }
     setSelectedPath(pathId);
     setCompleted({});
