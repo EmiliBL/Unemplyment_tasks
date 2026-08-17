@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 
+
 const FEEDBACK = {
   breakfast: "Breakfast done. You're basically an athlete now.",
   sport: "You actually did it. The couch lied to you.",
@@ -283,6 +284,7 @@ const PATHS = {
     clockout: null,
   },
 };
+
 
 const PATH_ORDER = ["glide", "standard", "sprint", "rest"];
 
